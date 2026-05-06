@@ -1,0 +1,104 @@
+$main-border: 4px black solid;
+$news-border: 1px black solid;
+$radius: 30px;
+$accent-color: red;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 0, 0);
+
+    main {
+        margin: calc(15vh + 10px) auto 10px auto;
+        background-color: white;
+        min-height: 80vh;
+        width: 97vw;
+        border: $main-border;
+        border-radius: $radius;
+        padding-bottom: 30px;
+
+        h1 {
+            font-size: 3rem;
+            padding-left: 80px;
+        }
+
+        section {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr); 
+            grid-template-rows: auto; 
+            gap: 30px;
+            padding: 0 40px;
+            margin-bottom: 20px;
+            article {
+                border: $news-border;
+                border-radius: $radius;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                background-color: #fff;
+
+                figure {
+                    width: 100%;
+                    height: 350px;
+                    margin: 0;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        display: block;
+                    }
+                }
+
+                h2 {
+                    font-size: 1.7rem;
+                    padding: 15px 30px 5px;
+                    margin: 0;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    padding: 0 30px 20px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        main{
+            h1{
+                font-size: 2rem;
+                padding-left: 20px;
+                text-align: center;
+            }
+            section{
+                grid-template-columns: 1fr;
+                padding: 0 20px;
+                article{
+                    figure{
+                        height: 200px;
+                    }
+                    h2{
+                        font-size: 1.4rem;
+                        padding-left: 15px;
+                    }
+                    p{
+                        font-size: 1rem;
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

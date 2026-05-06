@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="catalog.xsl"?>
+<catalog>
+    <car>
+        <model>BMW X5</model>
+        <class>Премиум</class>
+        <body_type>Внедорожник</body_type>
+        <fuel>Бензин / Дизель</fuel>
+        <price>2.89</price>
+        <image>BMW_X5.jpg</image>
+    </car>
+    <car>
+        <model>Mercedes-Benz E63 AMG</model>
+        <class>Премиум</class>
+        <body_type>Седан</body_type>
+        <fuel>Бензин</fuel>
+        <price>1.20</price>
+        <image>Mercedes_E63.jpg</image>
+    </car>
+    <car>
+        <model>Lixiang L6</model>
+        <class>Премиум</class>
+        <body_type>Внедорожник</body_type>
+        <fuel>Гибрид</fuel>
+        <price>1.17</price>
+        <image>Lixiang_L6.jpg</image>
+    </car>
+    <car>
+        <model>Audi RS7</model>
+        <class>Премиум</class>
+        <body_type>Лифтбек</body_type>
+        <fuel>Бензин</fuel>
+        <price>1.69</price>
+        <image>Audi_RS7.jpg</image>
+    </car>
+    <car>
+        <model>Volkswagen Tiguan</model>
+        <class>Комфорт</class>
+        <body_type>Внедорожник</body_type>
+        <fuel>Бензин / Дизель</fuel>
+        <price>0.61</price>
+        <image>VW_Tiguan.jpg</image>
+    </car>
+    <car>
+        <model>Geely Okavango</model>
+        <class>Комфорт</class>
+        <body_type>Внедорожник</body_type>
+        <fuel>Бензин</fuel>
+        <price>0.69</price>
+        <image>Geely_Okavango.jpg</image>
+    </car>
+    <car>
+        <model>Tesla Model Y</model>
+        <class>Премиум</class>
+        <body_type>Внедорожник</body_type>
+        <fuel>Электро</fuel>
+        <price>0.99</price>
+        <image>Tesla_Model_Y.jpg</image>
+    </car>
+    <car>
+        <model>Audi A5 Cabrio</model>
+        <class>Премиум</class>
+        <body_type>Кабриолет</body_type>
+        <fuel>Бензин</fuel>
+        <price>1.25</price>
+        <image>Audi_A5_Cabrio.jpg</image>
+    </car>
+    <car>
+        <model>Lada Niva Legend</model>
+        <class>Эконом</class>
+        <body_type>Внедорожник</body_type>
+        <fuel>Бензин</fuel>
+        <price>0.65</price>
+        <image>Lada_Niva.jpg</image>
+    </car>
+    <car>
+        <model>Lada Largus</model>
+        <class>Комфорт</class>
+        <body_type>Универсал</body_type>
+        <fuel>Бензин</fuel>
+        <price>0.45</price>
+        <image>Lada_Largus.jpg</image>
+    </car>
+    <car>
+        <model>Volkswagen Crafter</model>
+        <class>Коммерческий</class>
+        <body_type>Фургон</body_type>
+        <fuel>Дизель</fuel>
+        <price>0.73</price>
+        <image>VW_Crafter.jpg</image>
+    </car>
+    <car>
+        <model>Renault Master L3H3</model>
+        <class>Коммерческий</class>
+        <body_type>Фургон</body_type>
+        <fuel>Дизель</fuel>
+        <price>0.75</price>
+        <image>Renault_Master.jpg</image>
+    </car>
+</catalog>
