@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+footer {
+  width: 97vw;
+  margin: 20px auto 10px;
+  background-color: white;
+  border: 4px black solid;
+  border-radius: 30px;
+  padding: 40px 20px;
+  color: black;
+}
+footer .container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 30px;
+}
+footer .container h4 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px red solid;
+  display: inline-block;
+}
+footer .container ul {
+  list-style: none;
+  padding: 0;
+}
+footer .container ul li {
+  margin-bottom: 10px;
+}
+footer .container ul li a {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+footer .container ul li a:hover {
+  color: red;
+  transform: translateX(8px);
+}
+footer .copyright {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+footer .personal-info {
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 25px 15px;
+  }
+  footer .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  footer .container h4, footer .container h3 {
+    font-size: 1.1rem;
+  }
+  footer .container ul {
+    padding: 0;
+  }
+  footer .container ul li {
+    margin-bottom: 8px;
+  }
+  .copyright {
+    margin-top: 15px;
+    font-size: 0.7rem;
+  }
+  .personal-info {
+    font-size: 0.7rem;
+  }
+}/*# sourceMappingURL=My_footer.css.map */
