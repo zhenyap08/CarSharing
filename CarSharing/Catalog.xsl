@@ -25,104 +25,110 @@
             }
 
             header {
-                display: flex;
-                align-items: center;
-                width: 97vw;
-                height: 15vh;
-                padding: 10px;
-                border: 4px black solid;
-                border-radius: 30px;
-                background-color: white;
-                justify-content: space-between;
-                position: fixed;
-                top: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                z-index: 1000;
+            display: flex;
+            align-items: center;
+            width: 97vw;
+            height: 10vh;
+            padding: 10px;
+            border: 4px black solid;
+            border-radius: 30px;
+            background-color: white;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
             }
             header .logo {
-                display: flex;
-                align-items: center;
-                height: 100%;
+            display: flex;
+            align-items: center;
+            height: 100%;
             }
             header .logo a {
-                display: block;
-                height: 100%;
-                line-height: 0;
+            display: block;
+            height: 100%;
+            line-height: 0;
             }
             header .logo a .logo__svg {
-                height: 100%;
-                width: auto;
-                display: block;
+            height: 100%;
+            width: auto;
+            display: block;
             }
             header nav ul {
-                display: flex;
-                gap: 60px;
-                list-style: none;
-                margin: 0;
-                padding: 0;
+            display: flex;
+            gap: 60px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
             }
             header nav ul li {
-                font-size: 1.5rem;
-                font-weight: bold;
+            font-size: 1.5rem;
+            font-weight: bold;
             }
             header nav ul li a {
-                color: black;
+            color: black;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
             }
+            header nav ul li a:hover {
+            color: red;
+            transform: translateX(10px);
+            }
+
             .burger {
-                display: none;
-                flex-direction: column;
-                gap: 5px;
-                cursor: pointer;
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 1010;
             }
             .burger span {
-                width: 30px;
-                height: 4px;
-                background: black;
-                border-radius: 2px;
-                transition: 0.3s;
+            width: 30px;
+            height: 4px;
+            background: black;
+            border-radius: 2px;
+            transition: 0.3s;
             }
+
             @media (max-width: 768px) {
-                header {
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-                .burger {
-                    display: flex;
-                }
-                header nav {
-                    position: fixed;
-                    top: 0;
-                    right: -100%;
-                    width: 70%;
-                    height: 100vh;
-                    background: white;
-                    border-left: 3px solid black;
-                    padding-top: 100px;
-                    transition: 0.3s;
-                }
-                header nav ul {
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 30px;
-                }
-                header nav.active {
-                    right: 0;
-                }
-                .burger.active span:nth-child(1) {
-                    transform: rotate(45deg) translate(5px, 5px);
-                }
-                .burger.active span:nth-child(2) {
-                    opacity: 0;
-                }
-                .burger.active span:nth-child(3) {
-                    transform: rotate(-45deg) translate(6px, -6px);
-                }
+            .burger {
+                display: flex;
+            }
+            header nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: 100vh;
+                background: white;
+                border-left: 3px solid black;
+                padding-top: 100px;
+                transition: 0.3s;
+                z-index: 1005;
+            }
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+            header nav.active {
+                right: 0;
+            }
+            .burger.active span:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+            .burger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            .burger.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -6px);
+            }
             }
 
             main {
-                margin-top: calc(15vh + 10px);
+                margin-top: calc(10vh + 10px);
                 width: 97vw;
                 margin-left: auto;
                 margin-right: auto;
@@ -130,6 +136,58 @@
                 background-color:rgb(255, 255, 255);
                 border: 4px black solid;
                 border-radius: 30px;
+            }
+
+
+            .info-banner {
+                position: relative;
+                display: inline-block;
+                margin: 20px 0 20px 80px;
+            }
+
+            .info-icon {
+                background-color: red;
+                color: white;
+                padding: 8px 15px;
+                border-radius: 30px;
+                font-weight: bold;
+                cursor: pointer;
+                border: 1px solid black;
+                font-size: 0.9rem;
+            }
+
+            .info-tooltip {
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                top: 45px;
+                width: 300px;
+                background-color: white;
+                color: black;
+                border: 2px solid red;
+                border-radius: 15px;
+                padding: 12px;
+                font-size: 0.9rem;
+                transition: 0.3s;
+                z-index: 100;
+                line-height: 1.4;
+            }
+
+            .info-banner:hover .info-tooltip {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            @media (max-width: 768px) {
+                .info-banner {
+                    margin: 15px 0 15px 20px;
+                }
+                
+                .info-tooltip {
+                    width: 260px;
+                    font-size: 0.8rem;
+                }
             }
 
             h1{
@@ -181,6 +239,12 @@
                 overflow: hidden;
                 display: flex;
                 flex-direction: column;
+            }
+
+            .car-card:hover {
+                transform: translateY(-15px) scale(1.02);
+                box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+                border-color: red;
             }
 
             .car-image {
@@ -294,107 +358,15 @@
                 .personal-info {
                     font-size: 0.7rem;
                 }
-                }
+            }
 
         </style>
     </head>
     <body>
         <header>
             <div class="logo">
-                <a href="Menu.html">
-                        <svg class="logo__svg"
-                        viewBox="0 0 25.927275 13.888542"
-                        version="1.1"
-                        id="svg1"
-                        inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
-                        sodipodi:docname="CarSharingv2.svg"
-                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:svg="http://www.w3.org/2000/svg">
-                        <sodipodi:namedview
-                            id="namedview1"
-                            pagecolor="#ffffff"
-                            bordercolor="#000000"
-                            borderopacity="0.25"
-                            inkscape:showpageshadow="2"
-                            inkscape:pageopacity="0.0"
-                            inkscape:pagecheckerboard="0"
-                            inkscape:deskcolor="#d1d1d1"
-                            inkscape:document-units="mm"
-                            inkscape:zoom="3.8954759"
-                            inkscape:cx="44.6672"
-                            inkscape:cy="25.799158"
-                            inkscape:window-width="1920"
-                            inkscape:window-height="991"
-                            inkscape:window-x="-9"
-                            inkscape:window-y="-9"
-                            inkscape:window-maximized="1"
-                            inkscape:current-layer="layer1" />
-                        <defs
-                            id="defs1">
-                            <clipPath
-                            clipPathUnits="userSpaceOnUse"
-                            id="clipPath54">
-                            <path
-                                id="path54"
-                                style="stroke-width:0.0999999;stroke-linecap:square;paint-order:markers fill stroke;stop-color:#000000"
-                                d="m 1691.1994,-792.32001 h 1634.8919 v 92.82806 H 1691.1994 Z" />
-                            </clipPath>
-                            <linearGradient
-                            id="linearGradient16"
-                            inkscape:collect="always">
-                            <stop
-                                style="stop-color:#000000;stop-opacity:1;"
-                                offset="0"
-                                id="stop16" />
-                            <stop
-                                style="stop-color:#000000;stop-opacity:0;"
-                                offset="1"
-                                id="stop17" />
-                            </linearGradient>
-                            <linearGradient
-                            inkscape:collect="always"
-                            xlink:href="#linearGradient16"
-                            id="linearGradient17"
-                            x1="57.111649"
-                            y1="80.931496"
-                            x2="84.049774"
-                            y2="80.931496"
-                            gradientUnits="userSpaceOnUse"
-                            gradientTransform="translate(-3.1505756,9.5516835)" />
-                        </defs>
-                        <g
-                            inkscape:label="Слой 1"
-                            inkscape:groupmode="layer"
-                            id="layer1"
-                            transform="translate(-53.228926,-85.058198)">
-                            <text
-                            xml:space="preserve"
-                            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Georgia;-inkscape-font-specification:Georgia;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fb1818;fill-opacity:1;stroke:url(#linearGradient17);stroke-width:1.562;stroke-dasharray:none"
-                            x="53.329376"
-                            y="95.616371"
-                            id="text16"><tspan
-                                sodipodi:role="line"
-                                id="tspan16"
-                                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.1111px;font-family:Georgia;-inkscape-font-specification:Georgia;fill:#fb1818;fill-opacity:1;stroke:url(#linearGradient17);stroke-width:1.562;stroke-dasharray:none"
-                                x="53.329376"
-                                y="95.616371">K49</tspan></text>
-                            <text
-                            xml:space="preserve"
-                            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.2337px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#000000;stroke-width:0.113971;stroke-dasharray:none;stroke-opacity:1"
-                            x="48.822636"
-                            y="106.54473"
-                            id="text1"
-                            transform="scale(1.0864427,0.92043509)"><tspan
-                                sodipodi:role="line"
-                                id="tspan1"
-                                style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke:#000000;stroke-width:0.113971;stroke-dasharray:none;stroke-opacity:1"
-                                x="48.822636"
-                                y="106.54473">Каршеринг</tspan></text>
-                        </g>
-                    </svg>
+                <a href="Menu.html"> 
+                    <svg class="logo__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="97.993" height="52.492" viewBox="0 0 25.927 13.889"><defs><linearGradient id="a"><stop offset="0" style="stop-color:#000;stop-opacity:1"/><stop offset="1" style="stop-color:#000;stop-opacity:0"/></linearGradient><linearGradient xlink:href="#a" id="b" x1="57.112" x2="84.05" y1="80.931" y2="80.931" gradientTransform="translate(-3.15 9.552)" gradientUnits="userSpaceOnUse"/></defs><text xml:space="preserve" x="53.329" y="95.616" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:14.1111px;font-family:Georgia;-inkscape-font-specification:Georgia;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#fb1818;fill-opacity:1;stroke:url(#b);stroke-width:1.562;stroke-dasharray:none" transform="translate(-53.229 -85.058)"><tspan x="53.329" y="95.616" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:14.1111px;font-family:Georgia;-inkscape-font-specification:Georgia;fill:#fb1818;fill-opacity:1;stroke:url(#b);stroke-width:1.562;stroke-dasharray:none">K49</tspan></text><text xml:space="preserve" x="48.823" y="106.545" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-size:2.2337px;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:none;stroke:#000;stroke-width:.113971;stroke-dasharray:none;stroke-opacity:1" transform="matrix(1.08644 0 0 .92044 -53.229 -85.058)"><tspan x="48.823" y="106.545" style="font-style:normal;font-variant:normal;font-weight:400;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke:#000;stroke-width:.113971;stroke-dasharray:none;stroke-opacity:1">Каршеринг</tspan></text></svg>
                 </a>
             </div>
 
@@ -416,7 +388,15 @@
         </header>
 
         <main>
+            
             <h1> Каталог </h1>
+
+            <div class="info-banner">
+                <div class="info-icon">Важно    </div>
+                <div class="info-tooltip">
+                    Бронирование автомобилей доступно только в мобильном приложении K49 Carsharing. Сайт носит информационный характер для ознакомления с автопарком.
+                </div>
+            </div>
 
             <div class="but-container">
 
@@ -485,7 +465,7 @@
                     <h4>Поддержка</h4>
                     <p>Главный офис |9.00-21.00|</p>
                     <p>Минск, ...</p>
-                    <p>+375 (25) 725-00-00</p>
+                    <p>+375 (25) 725-65-22</p>
                 </div>
             </div>
         </footer>
