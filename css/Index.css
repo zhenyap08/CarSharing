@@ -1,0 +1,57 @@
+body {
+  background-color: gray;
+}
+body p {
+  color: blue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16pt;
+}
+body h1, body h2, body h3 {
+  color: purple;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.punkt1 {
+  color: red;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18pt;
+  list-style-type: circle;
+}
+
+.punkt2 {
+  color: yellow;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20pt;
+  list-style-type: square;
+}
+
+.punkt3 {
+  color: green;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22pt;
+}
+
+span {
+  color: aqua;
+}
+
+table td {
+  border: solid black 2px;
+}
+table thead {
+  color: aqua;
+}
+table tbody {
+  color: aquamarine;
+}
+table tfoot {
+  color: aqua;
+}
+
+.svg-contain {
+  width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+}/*# sourceMappingURL=Index.css.map */

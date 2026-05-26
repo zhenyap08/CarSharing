@@ -8,7 +8,7 @@ body {
   background-color: rgb(255, 0, 0);
 }
 body main {
-  margin: calc(15vh + 10px) auto 10px auto;
+  margin: calc(10vh + 10px) auto 10px auto;
   background-color: white;
   min-height: 80vh;
   width: 97vw;

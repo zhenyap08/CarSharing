@@ -12,7 +12,7 @@ body {
   background-color: rgb(255, 0, 0);
 }
 body main {
-  margin-top: calc(15vh + 10px);
+  margin-top: calc(10vh + 10px);
   margin-right: auto;
   margin-bottom: 10px;
   margin-left: auto;
